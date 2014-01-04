@@ -15,7 +15,7 @@
     // Override point for customization after application launch.
     [Parse setApplicationId:@"du5dp5Mdvl6HNBZzQIuFMwFZ6XFG2RrK1ep9cvW6"
                   clientKey:@"Q61It2UoATgDjGVIILNbIc4Cr10It2u8KATVPKcq"];
-    
+    [PFFacebookUtils initializeFacebook];
     
     return YES;
 }
