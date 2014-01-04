@@ -24,6 +24,7 @@
 		87A77AFD1877A795001B40BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87A77AFB1877A795001B40BD /* InfoPlist.strings */; };
 		87A77AFF1877A795001B40BD /* MatchedUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77AFE1877A795001B40BD /* MatchedUpTests.m */; };
 		87A77B0A1877ABAA001B40BD /* LLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77B091877ABAA001B40BD /* LLLoginViewController.m */; };
+		87A77B121877C0DB001B40BD /* LLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77B111877C0DB001B40BD /* LLConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		87A77AFE1877A795001B40BD /* MatchedUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchedUpTests.m; sourceTree = "<group>"; };
 		87A77B081877ABAA001B40BD /* LLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLLoginViewController.h; sourceTree = "<group>"; };
 		87A77B091877ABAA001B40BD /* LLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLLoginViewController.m; sourceTree = "<group>"; };
+		87A77B101877C0DB001B40BD /* LLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLConstants.h; sourceTree = "<group>"; };
+		87A77B111877C0DB001B40BD /* LLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLConstants.m; sourceTree = "<group>"; };
 		9707785F3D6E4714A7603AD7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28799089C904C3094330E77 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +144,8 @@
 		87A77AD71877A795001B40BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				87A77B101877C0DB001B40BD /* LLConstants.h */,
+				87A77B111877C0DB001B40BD /* LLConstants.m */,
 				87A77AD81877A795001B40BD /* MatchedUp-Info.plist */,
 				87A77AD91877A795001B40BD /* InfoPlist.strings */,
 				87A77ADC1877A795001B40BD /* main.m */,
@@ -310,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A77AE11877A795001B40BD /* LLAppDelegate.m in Sources */,
+				87A77B121877C0DB001B40BD /* LLConstants.m in Sources */,
 				87A77ADD1877A795001B40BD /* main.m in Sources */,
 				87A77AEA1877A795001B40BD /* LLSecondViewController.m in Sources */,
 				87A77B0A1877ABAA001B40BD /* LLLoginViewController.m in Sources */,

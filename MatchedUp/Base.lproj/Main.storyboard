@@ -112,7 +112,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="WdC-Hn-22u" eventType="touchUpInside" id="cWg-9M-xex"/>
-                                    <segue destination="8YX-ce-x5E" kind="push" identifier="loginToTabBarSegue" id="Bg4-Yn-Dpw"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jFz-FY-8sc">
@@ -125,6 +124,7 @@
                     <navigationItem key="navigationItem" id="Jz6-9G-qnP"/>
                     <connections>
                         <outlet property="activityIndicator" destination="jFz-FY-8sc" id="pL5-4W-EVn"/>
+                        <segue destination="8YX-ce-x5E" kind="push" identifier="loginToTabBarSegue" id="f7S-HA-KyT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uBR-9N-Lsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
