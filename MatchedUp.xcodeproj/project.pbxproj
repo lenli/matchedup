@@ -15,8 +15,6 @@
 		87A77ADD1877A795001B40BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77ADC1877A795001B40BD /* main.m */; };
 		87A77AE11877A795001B40BD /* LLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77AE01877A795001B40BD /* LLAppDelegate.m */; };
 		87A77AE41877A795001B40BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A77AE21877A795001B40BD /* Main.storyboard */; };
-		87A77AE71877A795001B40BD /* LLFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77AE61877A795001B40BD /* LLFirstViewController.m */; };
-		87A77AEA1877A795001B40BD /* LLSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77AE91877A795001B40BD /* LLSecondViewController.m */; };
 		87A77AEC1877A795001B40BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A77AEB1877A795001B40BD /* Images.xcassets */; };
 		87A77AF31877A795001B40BD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A77AF21877A795001B40BD /* XCTest.framework */; };
 		87A77AF41877A795001B40BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A77AD01877A794001B40BD /* Foundation.framework */; };
@@ -49,10 +47,6 @@
 		87A77ADF1877A795001B40BD /* LLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAppDelegate.h; sourceTree = "<group>"; };
 		87A77AE01877A795001B40BD /* LLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLAppDelegate.m; sourceTree = "<group>"; };
 		87A77AE31877A795001B40BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		87A77AE51877A795001B40BD /* LLFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLFirstViewController.h; sourceTree = "<group>"; };
-		87A77AE61877A795001B40BD /* LLFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLFirstViewController.m; sourceTree = "<group>"; };
-		87A77AE81877A795001B40BD /* LLSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSecondViewController.h; sourceTree = "<group>"; };
-		87A77AE91877A795001B40BD /* LLSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSecondViewController.m; sourceTree = "<group>"; };
 		87A77AEB1877A795001B40BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		87A77AF11877A795001B40BD /* MatchedUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchedUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A77AF21877A795001B40BD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -131,10 +125,6 @@
 				87A77AE01877A795001B40BD /* LLAppDelegate.m */,
 				87A77AE21877A795001B40BD /* Main.storyboard */,
 				87A77B0B1877ABAE001B40BD /* Login */,
-				87A77AE51877A795001B40BD /* LLFirstViewController.h */,
-				87A77AE61877A795001B40BD /* LLFirstViewController.m */,
-				87A77AE81877A795001B40BD /* LLSecondViewController.h */,
-				87A77AE91877A795001B40BD /* LLSecondViewController.m */,
 				87A77AEB1877A795001B40BD /* Images.xcassets */,
 				87A77AD71877A795001B40BD /* Supporting Files */,
 			);
@@ -317,9 +307,7 @@
 				87A77AE11877A795001B40BD /* LLAppDelegate.m in Sources */,
 				87A77B121877C0DB001B40BD /* LLConstants.m in Sources */,
 				87A77ADD1877A795001B40BD /* main.m in Sources */,
-				87A77AEA1877A795001B40BD /* LLSecondViewController.m in Sources */,
 				87A77B0A1877ABAA001B40BD /* LLLoginViewController.m in Sources */,
-				87A77AE71877A795001B40BD /* LLFirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
