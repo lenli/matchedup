@@ -106,10 +106,22 @@
             }
             if (userDictionary[@"birthday"]){
                 userProfile[kLLUserProfileBirthdayKey] = userDictionary[@"birthday"];
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateStyle:NSDateFormatterShortStyle];
+                NSDate *birthdate = [formatter dateFromString:userDictionary[@"birthday"]];
+                NSDate *now = [NSDate date];
+                NSTimeInterval seconds = [now timeIntervalSinceDate:birthdate];
+                int age = seconds / 31536000;
+                userProfile[kLLUserProfileAgeKey] = @(age);
+                
             }
             if (userDictionary[@"interested_in"]){
                 userProfile[kLLUserProfileInterestedInKey] = userDictionary[@"interested_in"];
             }
+            if (userDictionary[@"relationship_status"]){
+                userProfile[kLLUserProfileRelationshipStatusKey] = userDictionary[@"relationship_status"];
+            }
+
             if ([pictureURL absoluteString]) {
                 userProfile[kLLUserProfilePictureURL] = [pictureURL absoluteString];
             }

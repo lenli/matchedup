@@ -137,12 +137,8 @@
                     <connections>
                         <outlet property="editProfileButton" destination="yrf-4G-FpF" id="2xT-W1-Aba"/>
                         <outlet property="logButton" destination="ZjF-eA-QkK" id="m5E-MP-50p"/>
-                        <outlet property="logoutButton" destination="ZjF-eA-QkK" id="rbv-8O-dcv"/>
                         <outlet property="menSwitch" destination="rwy-3Y-Inv" id="Ugp-bX-Qc9"/>
-                        <outlet property="minAgeLabel" destination="2ur-fy-5Nf" id="y5e-nD-fxr"/>
                         <outlet property="minAgeSlider" destination="w4n-AK-z00" id="ATf-vF-Dgc"/>
-                        <outlet property="showMenSwitch" destination="rwy-3Y-Inv" id="gch-oy-5g4"/>
-                        <outlet property="showWomenSwitch" destination="Cnc-Za-Pd0" id="GV6-Yu-rhr"/>
                         <outlet property="singlesSwitch" destination="fhQ-GS-Gse" id="6kN-SV-b8n"/>
                         <outlet property="womenSwitch" destination="Cnc-Za-Pd0" id="cJf-6h-FBG"/>
                     </connections>
@@ -242,7 +238,6 @@
                         <outlet property="chatBarButtonItem" destination="ud8-iv-VkZ" id="CZb-T9-2Zj"/>
                         <outlet property="dislikeButton" destination="rtL-vx-tJ0" id="RG1-QH-1J1"/>
                         <outlet property="firstNameLabel" destination="d8L-fp-735" id="VVB-ry-1kW"/>
-                        <outlet property="imageView" destination="6SQ-ry-3XS" id="fbT-KJ-pUd"/>
                         <outlet property="infoButton" destination="A6P-aS-pCk" id="Lzc-YY-TYW"/>
                         <outlet property="likeButton" destination="JsG-Vg-Gh2" id="9uA-dK-IA9"/>
                         <outlet property="photoImageView" destination="6SQ-ry-3XS" id="lKy-DV-hY2"/>

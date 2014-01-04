@@ -20,6 +20,8 @@ NSString *const kLLUserProfileGenderKey         = @"gender";
 NSString *const kLLUserProfileBirthdayKey       = @"birthday";
 NSString *const kLLUserProfileInterestedInKey   = @"interestedIn";
 NSString *const kLLUserProfilePictureURL        = @"PictureURL";
+NSString *const kLLUserProfileRelationshipStatusKey =@"relationshipStatus";
+NSString *const kLLUserProfileAgeKey            = @"age";
 
 #pragma mark - Photo Class
 
