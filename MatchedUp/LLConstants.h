@@ -19,5 +19,12 @@ extern NSString *const kLLUserProfileLocationKey;
 extern NSString *const kLLUserProfileGenderKey;
 extern NSString *const kLLUserProfileBirthdayKey;
 extern NSString *const kLLUserProfileInterestedInKey;
+extern NSString *const kLLUserProfilePictureURL;
+
+#pragma mark - Photo Class
+extern NSString *const kLLPhotoClassKey;
+extern NSString *const kLLPhotoUserKey;
+extern NSString *const kLLPhotoPictureKey;
+
 
 @end

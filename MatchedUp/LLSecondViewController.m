@@ -9,6 +9,7 @@
 #import "LLSecondViewController.h"
 
 @interface LLSecondViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *profilePictureImageView;
 
 @end
 
@@ -18,6 +19,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    PFQuery *query = [PFQuery queryWithClassName:kLLPhotoClassKey];
+    [query whereKey:kLLPhotoUserKey equalTo:[PFUser currentUser]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] > 0) {
+            PFObject *photo = objects[0];
+            PFFile *pictureFile = photo[kLLPhotoPictureKey];
+            [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                self.profilePictureImageView.image = [UIImage imageWithData:data];
+            }];
+        }
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning

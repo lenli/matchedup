@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LLLoginViewController : UIViewController
+@interface LLLoginViewController : UIViewController <NSURLConnectionDataDelegate>
 
 @end
