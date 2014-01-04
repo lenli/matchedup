@@ -26,6 +26,7 @@
 		BA054E3718789E330031B184 /* LLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA054E3618789E330031B184 /* LLHomeViewController.m */; };
 		BA054E411878A3AA0031B184 /* LLSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA054E401878A3AA0031B184 /* LLSettingsViewController.m */; };
 		BA054E4B1878A70F0031B184 /* LLEditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA054E4A1878A70F0031B184 /* LLEditProfileViewController.m */; };
+		BA521D901878A95E00F105C5 /* LLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA521D8F1878A95E00F105C5 /* LLProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		BA054E401878A3AA0031B184 /* LLSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSettingsViewController.m; sourceTree = "<group>"; };
 		BA054E491878A70F0031B184 /* LLEditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLEditProfileViewController.h; sourceTree = "<group>"; };
 		BA054E4A1878A70F0031B184 /* LLEditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLEditProfileViewController.m; sourceTree = "<group>"; };
+		BA521D8E1878A95E00F105C5 /* LLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLProfileViewController.h; sourceTree = "<group>"; };
+		BA521D8F1878A95E00F105C5 /* LLProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLProfileViewController.m; sourceTree = "<group>"; };
 		F28799089C904C3094330E77 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +138,7 @@
 				87A77AE21877A795001B40BD /* Main.storyboard */,
 				87A77B0B1877ABAE001B40BD /* Login */,
 				BA054E3418789E090031B184 /* Home */,
+				BA521D8D1878A94C00F105C5 /* Profile */,
 				BA054E381878A1EC0031B184 /* Settings */,
 				BA054E421878A6640031B184 /* EditProfile */,
 				87A77AEB1877A795001B40BD /* Images.xcassets */,
@@ -208,6 +212,15 @@
 				BA054E4A1878A70F0031B184 /* LLEditProfileViewController.m */,
 			);
 			name = EditProfile;
+			sourceTree = "<group>";
+		};
+		BA521D8D1878A94C00F105C5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BA521D8E1878A95E00F105C5 /* LLProfileViewController.h */,
+				BA521D8F1878A95E00F105C5 /* LLProfileViewController.m */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +360,7 @@
 				BA054E3718789E330031B184 /* LLHomeViewController.m in Sources */,
 				BA054E4B1878A70F0031B184 /* LLEditProfileViewController.m in Sources */,
 				87A77B121877C0DB001B40BD /* LLConstants.m in Sources */,
+				BA521D901878A95E00F105C5 /* LLProfileViewController.m in Sources */,
 				BA054E411878A3AA0031B184 /* LLSettingsViewController.m in Sources */,
 				87A77ADD1877A795001B40BD /* main.m in Sources */,
 				87A77B0A1877ABAA001B40BD /* LLLoginViewController.m in Sources */,
