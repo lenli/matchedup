@@ -127,6 +127,7 @@
                                 </state>
                                 <connections>
                                     <action selector="editProfileButtonPressed:" destination="577-uz-jgv" eventType="touchUpInside" id="lHx-kC-v7K"/>
+                                    <segue destination="Lfn-rg-9CL" kind="push" id="cTy-k2-b7Z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -252,6 +253,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUT-9K-nEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="691" y="180"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="a7t-d0-EIk">
+            <objects>
+                <viewController id="Lfn-rg-9CL" customClass="LLEditProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v5t-9o-dNC"/>
+                        <viewControllerLayoutGuide type="bottom" id="QHZ-q3-Mh9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Kz-dr-gPM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your Tagline here" translatesAutoresizingMaskIntoConstraints="NO" id="4jj-V8-VBh">
+                                <rect key="frame" x="20" y="131" width="280" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.95177050880000003" green="1" blue="0.91183368939999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Why are you awesome?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gi-XS-WbN">
+                                <rect key="frame" x="20" y="102" width="184" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gct-4p-aRO">
+                                <rect key="frame" x="20" y="233" width="280" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="G6e-az-AGl">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="fcX-jq-v2a">
+                            <connections>
+                                <action selector="saveBarButtonItemPressed:" destination="Lfn-rg-9CL" id="VcA-aZ-ZAN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="photoImageView" destination="gct-4p-aRO" id="Q4f-Le-iZS"/>
+                        <outlet property="saveBarButtonItem" destination="fcX-jq-v2a" id="onZ-vq-ZxW"/>
+                        <outlet property="taglineTextView" destination="4jj-V8-VBh" id="zHz-Ql-rNU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8lm-kV-u4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="-117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V87-vF-x4O">
