@@ -23,6 +23,8 @@
 		87A77AFF1877A795001B40BD /* MatchedUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77AFE1877A795001B40BD /* MatchedUpTests.m */; };
 		87A77B0A1877ABAA001B40BD /* LLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77B091877ABAA001B40BD /* LLLoginViewController.m */; };
 		87A77B121877C0DB001B40BD /* LLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77B111877C0DB001B40BD /* LLConstants.m */; };
+		BA054E3718789E330031B184 /* LLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA054E3618789E330031B184 /* LLHomeViewController.m */; };
+		BA054E411878A3AA0031B184 /* LLSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA054E401878A3AA0031B184 /* LLSettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		87A77B101877C0DB001B40BD /* LLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLConstants.h; sourceTree = "<group>"; };
 		87A77B111877C0DB001B40BD /* LLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLConstants.m; sourceTree = "<group>"; };
 		9707785F3D6E4714A7603AD7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA054E3518789E330031B184 /* LLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLHomeViewController.h; sourceTree = "<group>"; };
+		BA054E3618789E330031B184 /* LLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLHomeViewController.m; sourceTree = "<group>"; };
+		BA054E3F1878A3AA0031B184 /* LLSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSettingsViewController.h; sourceTree = "<group>"; };
+		BA054E401878A3AA0031B184 /* LLSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSettingsViewController.m; sourceTree = "<group>"; };
 		F28799089C904C3094330E77 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +131,8 @@
 				87A77AE01877A795001B40BD /* LLAppDelegate.m */,
 				87A77AE21877A795001B40BD /* Main.storyboard */,
 				87A77B0B1877ABAE001B40BD /* Login */,
+				BA054E3418789E090031B184 /* Home */,
+				BA054E381878A1EC0031B184 /* Settings */,
 				87A77AEB1877A795001B40BD /* Images.xcassets */,
 				87A77AD71877A795001B40BD /* Supporting Files */,
 			);
@@ -169,6 +177,24 @@
 				87A77B091877ABAA001B40BD /* LLLoginViewController.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		BA054E3418789E090031B184 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BA054E3518789E330031B184 /* LLHomeViewController.h */,
+				BA054E3618789E330031B184 /* LLHomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		BA054E381878A1EC0031B184 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BA054E3F1878A3AA0031B184 /* LLSettingsViewController.h */,
+				BA054E401878A3AA0031B184 /* LLSettingsViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,7 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A77AE11877A795001B40BD /* LLAppDelegate.m in Sources */,
+				BA054E3718789E330031B184 /* LLHomeViewController.m in Sources */,
 				87A77B121877C0DB001B40BD /* LLConstants.m in Sources */,
+				BA054E411878A3AA0031B184 /* LLSettingsViewController.m in Sources */,
 				87A77ADD1877A795001B40BD /* main.m in Sources */,
 				87A77B0A1877ABAA001B40BD /* LLLoginViewController.m in Sources */,
 			);
