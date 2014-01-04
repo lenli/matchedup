@@ -19,7 +19,10 @@
 @property (strong, nonatomic) IBOutlet UIButton *infoButton;
 @property (strong, nonatomic) IBOutlet UIButton *dislikeButton;
 
+@property (strong, nonatomic) NSArray *photos;
+@property (strong, nonatomic) PFObject *photo;
 
+@property (nonatomic) int currentPhotoIndex;
 
 @end
 
@@ -38,6 +41,23 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.likeButton.enabled = NO;
+    self.dislikeButton.enabled = NO;
+    self.infoButton.enabled = NO;
+    self.currentPhotoIndex = 0;
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+    [query includeKey:@"user"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.photos = objects;
+        if (!error) {
+            self.photos = objects;
+            [self queryForCurrentPhotoIndex];
+        } else {
+            NSLog(@"Error downloading photos: %@", error);
+        }
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,6 +82,22 @@
 
 - (IBAction)infoButtonPressed:(UIButton *)sender
 {
+}
+
+#pragma mark - Helper Methods
+- (void)queryForCurrentPhotoIndex
+{
+    if ([self.photos count] > 0) {
+        self.photo = self.photos[self.currentPhotoIndex];
+        PFFile *file = self.photo[@"image"];
+        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error) {
+                UIImage *image = [UIImage imageWithData:data];
+                self.photoImageView.image = image;
+            }
+            else NSLog(@"Error getting current photo: %@",error);
+        }];
+    }
 }
 
 
