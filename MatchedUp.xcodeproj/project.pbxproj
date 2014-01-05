@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		676C48BD5416406299759346 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9707785F3D6E4714A7603AD7 /* libPods.a */; };
+		879EFF2F187A107200F08B2D /* LLChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879EFF2E187A107200F08B2D /* LLChatViewController.m */; };
 		87A77AD11877A794001B40BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A77AD01877A794001B40BD /* Foundation.framework */; };
 		87A77AD31877A795001B40BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A77AD21877A795001B40BD /* CoreGraphics.framework */; };
 		87A77AD51877A795001B40BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A77AD41877A795001B40BD /* UIKit.framework */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		879EFF2D187A107200F08B2D /* LLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLChatViewController.h; sourceTree = "<group>"; };
+		879EFF2E187A107200F08B2D /* LLChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLChatViewController.m; sourceTree = "<group>"; };
 		87A77ACD1877A794001B40BD /* MatchedUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchedUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A77AD01877A794001B40BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		87A77AD21877A795001B40BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		879EFF2C187A103F00F08B2D /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				879EFF2D187A107200F08B2D /* LLChatViewController.h */,
+				879EFF2E187A107200F08B2D /* LLChatViewController.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
 		87A77AC41877A794001B40BD = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +173,7 @@
 				BA521D8D1878A94C00F105C5 /* Profile */,
 				BAA18DF91879FD56005365B5 /* Match */,
 				BAA18DFD187A05AB005365B5 /* Matches */,
+				879EFF2C187A103F00F08B2D /* Chat */,
 				BA054E381878A1EC0031B184 /* Settings */,
 				BA054E421878A6640031B184 /* EditProfile */,
 				87A77AEB1877A795001B40BD /* Images.xcassets */,
@@ -415,6 +428,7 @@
 				BA054E4B1878A70F0031B184 /* LLEditProfileViewController.m in Sources */,
 				87A77B121877C0DB001B40BD /* LLConstants.m in Sources */,
 				BAA18E00187A05C0005365B5 /* LLMatchesViewController.m in Sources */,
+				879EFF2F187A107200F08B2D /* LLChatViewController.m in Sources */,
 				BA521D901878A95E00F105C5 /* LLProfileViewController.m in Sources */,
 				BA054E411878A3AA0031B184 /* LLSettingsViewController.m in Sources */,
 				87A77ADD1877A795001B40BD /* main.m in Sources */,
