@@ -7,6 +7,7 @@
 //
 
 #import "LLHomeViewController.h"
+#import "LLTestUser.h"
 
 @interface LLHomeViewController ()
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *chatBarButtonItem;
@@ -44,12 +45,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [LLTestUser saveTestUserToParse];
+    
     self.likeButton.enabled = NO;
     self.dislikeButton.enabled = NO;
     self.infoButton.enabled = NO;
     self.currentPhotoIndex = 0;
     
     PFQuery *query = [PFQuery queryWithClassName:kLLPhotoClassKey];
+    [query whereKey:kLLPhotoUserKey notEqualTo:[PFUser currentUser]];
     [query includeKey:kLLPhotoUserKey];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.photos = objects;
@@ -175,7 +179,6 @@
         self.isLikedByCurrentUser = isLiked;
         self.isDislikedByCurrentUser = !isLiked;
         [self.activities addObject:activity];
-        NSLog(@"%@", activity);
         [self setupNextPhoto];
     }];
 }

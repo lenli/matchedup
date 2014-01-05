@@ -27,6 +27,8 @@
 		BA054E411878A3AA0031B184 /* LLSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA054E401878A3AA0031B184 /* LLSettingsViewController.m */; };
 		BA054E4B1878A70F0031B184 /* LLEditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA054E4A1878A70F0031B184 /* LLEditProfileViewController.m */; };
 		BA521D901878A95E00F105C5 /* LLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA521D8F1878A95E00F105C5 /* LLProfileViewController.m */; };
+		BA76AEF1187902C20080920F /* LLTestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA76AEF0187902C20080920F /* LLTestUser.m */; };
+		BA76AEF3187903220080920F /* Spider_robot.png in Resources */ = {isa = PBXBuildFile; fileRef = BA76AEF2187903220080920F /* Spider_robot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,9 @@
 		BA054E4A1878A70F0031B184 /* LLEditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLEditProfileViewController.m; sourceTree = "<group>"; };
 		BA521D8E1878A95E00F105C5 /* LLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLProfileViewController.h; sourceTree = "<group>"; };
 		BA521D8F1878A95E00F105C5 /* LLProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLProfileViewController.m; sourceTree = "<group>"; };
+		BA76AEEF187902C20080920F /* LLTestUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLTestUser.h; sourceTree = "<group>"; };
+		BA76AEF0187902C20080920F /* LLTestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLTestUser.m; sourceTree = "<group>"; };
+		BA76AEF2187903220080920F /* Spider_robot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spider_robot.png; sourceTree = "<group>"; };
 		F28799089C904C3094330E77 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +138,7 @@
 		87A77AD61877A795001B40BD /* MatchedUp */ = {
 			isa = PBXGroup;
 			children = (
+				BA76AEEE187902A80080920F /* CreateParseTestUser */,
 				87A77ADF1877A795001B40BD /* LLAppDelegate.h */,
 				87A77AE01877A795001B40BD /* LLAppDelegate.m */,
 				87A77AE21877A795001B40BD /* Main.storyboard */,
@@ -223,6 +229,16 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		BA76AEEE187902A80080920F /* CreateParseTestUser */ = {
+			isa = PBXGroup;
+			children = (
+				BA76AEF2187903220080920F /* Spider_robot.png */,
+				BA76AEEF187902C20080920F /* LLTestUser.h */,
+				BA76AEF0187902C20080920F /* LLTestUser.m */,
+			);
+			name = CreateParseTestUser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,6 +321,7 @@
 				87A77AEC1877A795001B40BD /* Images.xcassets in Resources */,
 				87A77ADB1877A795001B40BD /* InfoPlist.strings in Resources */,
 				87A77AE41877A795001B40BD /* Main.storyboard in Resources */,
+				BA76AEF3187903220080920F /* Spider_robot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA76AEF1187902C20080920F /* LLTestUser.m in Sources */,
 				87A77AE11877A795001B40BD /* LLAppDelegate.m in Sources */,
 				BA054E3718789E330031B184 /* LLHomeViewController.m in Sources */,
 				BA054E4B1878A70F0031B184 /* LLEditProfileViewController.m in Sources */,
