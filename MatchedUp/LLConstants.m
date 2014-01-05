@@ -11,6 +11,7 @@
 @implementation LLConstants
 
 #pragma mark - User Class
+NSString *const kLLUserTaglineKey               =@"tagline";
 
 NSString *const kLLUserProfileKey               = @"profile";
 NSString *const kLLUserProfileNameKey           = @"name";
@@ -28,5 +29,16 @@ NSString *const kLLUserProfileAgeKey            = @"age";
 NSString *const kLLPhotoClassKey                = @"Photo";
 NSString *const kLLPhotoUserKey                 = @"user";
 NSString *const kLLPhotoPictureKey              = @"image";
+
+
+#pragma mark - Activity Class
+
+NSString *const kLLActivityClassKey             = @"Activity";
+NSString *const kLLActivityTypeKey              = @"type";
+NSString *const kLLActivityFromUserKey          = @"fromUser";
+NSString *const kLLActivityToUserKey            = @"toUser";
+NSString *const kLLActivityPhotoKey             = @"photo";
+NSString *const kLLActivityTypeLikeKey          = @"like";
+NSString *const kLLActivityTypeDislikeKey       = @"dislike";
 
 @end
