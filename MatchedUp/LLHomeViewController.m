@@ -94,12 +94,31 @@
             if (!error) {
                 UIImage *image = [UIImage imageWithData:data];
                 self.photoImageView.image = image;
+                [self updateView];
             }
             else NSLog(@"Error getting current photo: %@",error);
         }];
     }
 }
 
+- (void)updateView
+{
+    self.firstNameLabel.text = self.photo[@"user"][@"profile"][@"firstName"];
+    self.ageLabel.text = [NSString stringWithFormat:@"%@", self.photo[@"user"][@"profile"][@"age"]];
+    
+    
+}
+
+- (void)setupNextPhoto
+{
+    if (self.currentPhotoIndex + 1 < self.photos.count) {
+        self.currentPhotoIndex ++;
+        [self queryForCurrentPhotoIndex];
+    } else {
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"No More Users" message:@"Check back later for more people!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alertview show];
+    }
+}
 
 @end
 
