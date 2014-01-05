@@ -93,6 +93,7 @@
 - (IBAction)likeButtonPressed:(UIButton *)sender
 {
     [self checkPhoto:YES];
+    
 }
 - (IBAction)dislikeButtonPressed:(UIButton *)sender
 {
@@ -177,11 +178,7 @@
 {
     PFObject *activity = [PFObject objectWithClassName:kLLActivityClassKey];
     
-    if (isLiked) {
-        [activity setObject:kLLActivityTypeLikeKey forKey:kLLActivityTypeKey];
-    } else {
-        [activity setObject:kLLActivityTypeDislikeKey forKey:kLLActivityTypeKey];
-    }
+    [activity setObject:isLiked ? kLLActivityTypeLikeKey : kLLActivityTypeDislikeKey forKey:kLLActivityTypeKey];
 
     [activity setObject:[PFUser currentUser] forKey:kLLActivityFromUserKey];
     [activity setObject:[self.photo objectForKey:kLLPhotoUserKey] forKey:kLLActivityToUserKey];
@@ -190,6 +187,7 @@
         self.isLikedByCurrentUser = isLiked;
         self.isDislikedByCurrentUser = !isLiked;
         [self.activities addObject:activity];
+        if (isLiked) [self checkForPhotoUserLikes];
         [self setupNextPhoto];
     }];
 }
@@ -208,6 +206,45 @@
     } else {
         [self saveLikeActivity:isLiked];
     }
+}
+
+- (void)checkForPhotoUserLikes
+{
+    PFQuery *query = [PFQuery queryWithClassName:kLLActivityClassKey];
+    [query whereKey:kLLActivityFromUserKey equalTo:self.photo[kLLPhotoUserKey]];
+    [query whereKey:kLLActivityToUserKey equalTo:[PFUser currentUser]];
+    [query whereKey:kLLActivityTypeKey equalTo:kLLActivityTypeLikeKey];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] > 0) {
+            [self createChatroom];
+        }
+    }];
+    
+}
+
+- (void)createChatroom
+{
+    PFQuery *queryForChatroom = [PFQuery queryWithClassName:@"Chatroom"];
+    [queryForChatroom whereKey:@"user1" equalTo:[PFUser currentUser]];
+    [queryForChatroom whereKey:@"user2" equalTo:self.photo[kLLPhotoUserKey]];
+    
+    PFQuery *queryForChatroomInverse = [PFQuery queryWithClassName:@"Chatroom"];
+    [queryForChatroomInverse whereKey:@"user1" equalTo:self.photo[kLLPhotoUserKey]];
+    [queryForChatroomInverse whereKey:@"user2" equalTo:[PFUser currentUser]];
+    
+    PFQuery *queryChatroom = [PFQuery orQueryWithSubqueries:@[queryForChatroom, queryForChatroomInverse]];
+    [queryChatroom findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] > 0) {
+            PFObject *chatroom = [PFObject objectWithClassName:@"Chatroom"];
+            [chatroom setObject:[PFUser currentUser] forKey:@"user1"];
+            [chatroom setObject:self.photo[kLLPhotoUserKey] forKey:@"user2"];
+            [chatroom saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                [self performSegueWithIdentifier:@"homeToMatchSegue" sender:nil];
+            }];
+            
+        }
+    }];
+    
 }
 
 @end

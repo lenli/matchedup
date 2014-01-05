@@ -1,4 +1,8 @@
 matchedup
 =========
 
-iOS Dating App using Facebook Login, Parse 
+iOS Dating App using the following Cocoapods:
+- Facebook Login
+- Parse 
+- JSMessagesViewController
+
