@@ -21,8 +21,11 @@
 
 @property (strong, nonatomic) NSArray *photos;
 @property (strong, nonatomic) PFObject *photo;
+@property (strong, nonatomic) NSMutableArray *activities;
 
 @property (nonatomic) int currentPhotoIndex;
+@property (nonatomic) BOOL isLikedByCurrentUser;
+@property (nonatomic) BOOL isDislikedByCurrentUser;
 
 @end
 
@@ -41,8 +44,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.likeButton.enabled = NO;
-    self.dislikeButton.enabled = NO;
+//    self.likeButton.enabled = NO;
+//    self.dislikeButton.enabled = NO;
     self.infoButton.enabled = NO;
     self.currentPhotoIndex = 0;
     
@@ -75,9 +78,11 @@
 }
 - (IBAction)likeButtonPressed:(UIButton *)sender
 {
+    [self checkPhoto:YES];
 }
 - (IBAction)dislikeButtonPressed:(UIButton *)sender
 {
+    [self checkPhoto:NO];
 }
 
 - (IBAction)infoButtonPressed:(UIButton *)sender
@@ -117,6 +122,45 @@
     } else {
         UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"No More Users" message:@"Check back later for more people!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         [alertview show];
+    }
+}
+
+- (void)saveLikeActivity:(BOOL)isLiked
+{
+    PFObject *activity = [PFObject objectWithClassName:@"Activity"];
+    
+    if (isLiked) {
+        [activity setObject:@"like" forKey:@"type"];
+    } else {
+        [activity setObject:@"dislike" forKey:@"type"];
+    }
+
+    [activity setObject:[PFUser currentUser] forKey:@"fromUser"];
+    [activity setObject:[self.photo objectForKey:@"user"] forKey:@"toUser"];
+    [activity setObject:self.photo forKey:@"photo"];
+    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        self.isLikedByCurrentUser = isLiked;
+        self.isDislikedByCurrentUser = !isLiked;
+        [self.activities addObject:activity];
+        NSLog(@"%@", activity);
+        [self setupNextPhoto];
+    }];
+}
+
+- (void)checkPhoto:(BOOL)isLiked
+{
+    if (self.isLikedByCurrentUser == isLiked) {
+        [self setupNextPhoto];
+        return;
+    } else if (self.isDislikedByCurrentUser == isLiked) {
+        for (PFObject *activity in self.activities) {
+            [activity deleteInBackground];
+        }
+        [self.activities removeLastObject];
+        [self saveLikeActivity:isLiked];
+    } else {
+        [self saveLikeActivity:isLiked];
     }
 }
 
