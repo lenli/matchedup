@@ -8,6 +8,7 @@
 
 #import "LLHomeViewController.h"
 #import "LLTestUser.h"
+#import "LLProfileViewController.h"
 
 @interface LLHomeViewController ()
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *chatBarButtonItem;
@@ -45,7 +46,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [LLTestUser saveTestUserToParse];
+//    [LLTestUser saveTestUserToParse];
     
     self.likeButton.enabled = NO;
     self.dislikeButton.enabled = NO;
@@ -73,6 +74,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"homeToProfileSegue"]) {
+        LLProfileViewController *profileVC = segue.destinationViewController;
+        profileVC.photo = self.photo;
+        
+    }
+}
+
 #pragma mark - IBActions
 - (IBAction)chatBarButtonItemPressed:(UIBarButtonItem *)sender
 {
@@ -91,6 +101,7 @@
 
 - (IBAction)infoButtonPressed:(UIButton *)sender
 {
+    [self performSegueWithIdentifier:@"homeToProfileSegue" sender:nil];
 }
 
 #pragma mark - Helper Methods
@@ -137,6 +148,7 @@
                 }
                 self.likeButton.enabled = YES;
                 self.dislikeButton.enabled = YES;
+                self.infoButton.enabled = YES;
             }
         }];
     }
@@ -175,7 +187,6 @@
     [activity setObject:[self.photo objectForKey:kLLPhotoUserKey] forKey:kLLActivityToUserKey];
     [activity setObject:self.photo forKey:kLLActivityPhotoKey];
     [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        
         self.isLikedByCurrentUser = isLiked;
         self.isDislikedByCurrentUser = !isLiked;
         [self.activities addObject:activity];

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LLProfileViewController : UIViewController
+@property (strong, nonatomic) PFObject *photo;
 
 @end

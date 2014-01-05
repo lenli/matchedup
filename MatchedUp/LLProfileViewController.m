@@ -32,6 +32,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    PFFile *pictureFile = self.photo[kLLPhotoPictureKey];
+    [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        self.profilePictureImageView.image = [UIImage imageWithData:data];
+    }];
+    
+    PFUser *user = self.photo[kLLPhotoUserKey];
+    self.locationLabel.text = user[kLLUserProfileKey][kLLUserProfileLocationKey];
+    self.ageLabel.text = [NSString stringWithFormat:@"%@", user[kLLUserProfileKey][kLLUserProfileAgeKey]];
+    self.statusLabel.text = user[kLLUserProfileKey][kLLUserProfileRelationshipStatusKey];
+    self.taglineLabel.text = user[kLLUserTaglineKey];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
