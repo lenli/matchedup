@@ -30,6 +30,8 @@
 		BA521D901878A95E00F105C5 /* LLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA521D8F1878A95E00F105C5 /* LLProfileViewController.m */; };
 		BA76AEF1187902C20080920F /* LLTestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA76AEF0187902C20080920F /* LLTestUser.m */; };
 		BA76AEF3187903220080920F /* Spider_robot.png in Resources */ = {isa = PBXBuildFile; fileRef = BA76AEF2187903220080920F /* Spider_robot.png */; };
+		BAA18DFC1879FD76005365B5 /* LLMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA18DFB1879FD76005365B5 /* LLMatchViewController.m */; };
+		BAA18E00187A05C0005365B5 /* LLMatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA18DFF187A05C0005365B5 /* LLMatchesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,10 @@
 		BA76AEF2187903220080920F /* Spider_robot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spider_robot.png; sourceTree = "<group>"; };
 		BA76AEF4187921980080920F /* libPods-Parse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Parse.a"; path = "Pods/build/Release-iphoneos/libPods-Parse.a"; sourceTree = "<group>"; };
 		BA76AEF61879222C0080920F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BAA18DFA1879FD76005365B5 /* LLMatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLMatchViewController.h; sourceTree = "<group>"; };
+		BAA18DFB1879FD76005365B5 /* LLMatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLMatchViewController.m; sourceTree = "<group>"; };
+		BAA18DFE187A05C0005365B5 /* LLMatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLMatchesViewController.h; sourceTree = "<group>"; };
+		BAA18DFF187A05C0005365B5 /* LLMatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLMatchesViewController.m; sourceTree = "<group>"; };
 		F28799089C904C3094330E77 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +159,8 @@
 				87A77B0B1877ABAE001B40BD /* Login */,
 				BA054E3418789E090031B184 /* Home */,
 				BA521D8D1878A94C00F105C5 /* Profile */,
+				BAA18DF91879FD56005365B5 /* Match */,
+				BAA18DFD187A05AB005365B5 /* Matches */,
 				BA054E381878A1EC0031B184 /* Settings */,
 				BA054E421878A6640031B184 /* EditProfile */,
 				87A77AEB1877A795001B40BD /* Images.xcassets */,
@@ -245,6 +253,24 @@
 				BA76AEF0187902C20080920F /* LLTestUser.m */,
 			);
 			name = CreateParseTestUser;
+			sourceTree = "<group>";
+		};
+		BAA18DF91879FD56005365B5 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				BAA18DFA1879FD76005365B5 /* LLMatchViewController.h */,
+				BAA18DFB1879FD76005365B5 /* LLMatchViewController.m */,
+			);
+			name = Match;
+			sourceTree = "<group>";
+		};
+		BAA18DFD187A05AB005365B5 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				BAA18DFE187A05C0005365B5 /* LLMatchesViewController.h */,
+				BAA18DFF187A05C0005365B5 /* LLMatchesViewController.m */,
+			);
+			name = Matches;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,10 +409,12 @@
 			files = (
 				87A77B0A1877ABAA001B40BD /* LLLoginViewController.m in Sources */,
 				BA76AEF1187902C20080920F /* LLTestUser.m in Sources */,
+				BAA18DFC1879FD76005365B5 /* LLMatchViewController.m in Sources */,
 				87A77AE11877A795001B40BD /* LLAppDelegate.m in Sources */,
 				BA054E3718789E330031B184 /* LLHomeViewController.m in Sources */,
 				BA054E4B1878A70F0031B184 /* LLEditProfileViewController.m in Sources */,
 				87A77B121877C0DB001B40BD /* LLConstants.m in Sources */,
+				BAA18E00187A05C0005365B5 /* LLMatchesViewController.m in Sources */,
 				BA521D901878A95E00F105C5 /* LLProfileViewController.m in Sources */,
 				BA054E411878A3AA0031B184 /* LLSettingsViewController.m in Sources */,
 				87A77ADD1877A795001B40BD /* main.m in Sources */,
