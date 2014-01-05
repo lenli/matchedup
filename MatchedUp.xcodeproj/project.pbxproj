@@ -23,6 +23,7 @@
 		87A77AFF1877A795001B40BD /* MatchedUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77AFE1877A795001B40BD /* MatchedUpTests.m */; };
 		87A77B0A1877ABAA001B40BD /* LLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77B091877ABAA001B40BD /* LLLoginViewController.m */; };
 		87A77B121877C0DB001B40BD /* LLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A77B111877C0DB001B40BD /* LLConstants.m */; };
+		87A77B14187926D4001B40BD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A77B13187926D4001B40BD /* Parse.framework */; };
 		BA054E3718789E330031B184 /* LLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA054E3618789E330031B184 /* LLHomeViewController.m */; };
 		BA054E411878A3AA0031B184 /* LLSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA054E401878A3AA0031B184 /* LLSettingsViewController.m */; };
 		BA054E4B1878A70F0031B184 /* LLEditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA054E4A1878A70F0031B184 /* LLEditProfileViewController.m */; };
@@ -63,6 +64,7 @@
 		87A77B091877ABAA001B40BD /* LLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLLoginViewController.m; sourceTree = "<group>"; };
 		87A77B101877C0DB001B40BD /* LLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLConstants.h; sourceTree = "<group>"; };
 		87A77B111877C0DB001B40BD /* LLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLConstants.m; sourceTree = "<group>"; };
+		87A77B13187926D4001B40BD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Pods/Parse/Parse.framework; sourceTree = "<group>"; };
 		9707785F3D6E4714A7603AD7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA054E3518789E330031B184 /* LLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLHomeViewController.h; sourceTree = "<group>"; };
 		BA054E3618789E330031B184 /* LLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLHomeViewController.m; sourceTree = "<group>"; };
@@ -75,6 +77,8 @@
 		BA76AEEF187902C20080920F /* LLTestUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLTestUser.h; sourceTree = "<group>"; };
 		BA76AEF0187902C20080920F /* LLTestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLTestUser.m; sourceTree = "<group>"; };
 		BA76AEF2187903220080920F /* Spider_robot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spider_robot.png; sourceTree = "<group>"; };
+		BA76AEF4187921980080920F /* libPods-Parse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Parse.a"; path = "Pods/build/Release-iphoneos/libPods-Parse.a"; sourceTree = "<group>"; };
+		BA76AEF61879222C0080920F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F28799089C904C3094330E77 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,8 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87A77AD31877A795001B40BD /* CoreGraphics.framework in Frameworks */,
+				87A77B14187926D4001B40BD /* Parse.framework in Frameworks */,
 				87A77AD51877A795001B40BD /* UIKit.framework in Frameworks */,
+				87A77AD31877A795001B40BD /* CoreGraphics.framework in Frameworks */,
 				87A77AD11877A794001B40BD /* Foundation.framework in Frameworks */,
 				676C48BD5416406299759346 /* libPods.a in Frameworks */,
 			);
@@ -126,6 +131,9 @@
 		87A77ACF1877A794001B40BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				87A77B13187926D4001B40BD /* Parse.framework */,
+				BA76AEF61879222C0080920F /* SystemConfiguration.framework */,
+				BA76AEF4187921980080920F /* libPods-Parse.a */,
 				87A77AD01877A794001B40BD /* Foundation.framework */,
 				87A77AD21877A795001B40BD /* CoreGraphics.framework */,
 				87A77AD41877A795001B40BD /* UIKit.framework */,
@@ -373,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A77B0A1877ABAA001B40BD /* LLLoginViewController.m in Sources */,
 				BA76AEF1187902C20080920F /* LLTestUser.m in Sources */,
 				87A77AE11877A795001B40BD /* LLAppDelegate.m in Sources */,
 				BA054E3718789E330031B184 /* LLHomeViewController.m in Sources */,
@@ -381,7 +390,6 @@
 				BA521D901878A95E00F105C5 /* LLProfileViewController.m in Sources */,
 				BA054E411878A3AA0031B184 /* LLSettingsViewController.m in Sources */,
 				87A77ADD1877A795001B40BD /* main.m in Sources */,
-				87A77B0A1877ABAA001B40BD /* LLLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,9 +517,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/leonardli/Dropbox/CodeCoalitionIOS/Section9/MatchedUp/Pods/Parse,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MatchedUp/MatchedUp-Prefix.pch";
 				INFOPLIST_FILE = "MatchedUp/MatchedUp-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -523,9 +536,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/leonardli/Dropbox/CodeCoalitionIOS/Section9/MatchedUp/Pods/Parse,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MatchedUp/MatchedUp-Prefix.pch";
 				INFOPLIST_FILE = "MatchedUp/MatchedUp-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

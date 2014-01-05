@@ -55,7 +55,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="w4n-AK-z00">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="18" minValue="18" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="w4n-AK-z00">
                                 <rect key="frame" x="18" y="153" width="284" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
@@ -135,10 +135,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="bM6-5C-dHu"/>
                     <connections>
+                        <outlet property="ageLabel" destination="yG4-eJ-rlQ" id="pyS-Gn-612"/>
                         <outlet property="editProfileButton" destination="yrf-4G-FpF" id="2xT-W1-Aba"/>
                         <outlet property="logButton" destination="ZjF-eA-QkK" id="m5E-MP-50p"/>
+                        <outlet property="maxAgeSlider" destination="w4n-AK-z00" id="zgr-u0-JFC"/>
                         <outlet property="menSwitch" destination="rwy-3Y-Inv" id="Ugp-bX-Qc9"/>
-                        <outlet property="minAgeSlider" destination="w4n-AK-z00" id="ATf-vF-Dgc"/>
                         <outlet property="singlesSwitch" destination="fhQ-GS-Gse" id="6kN-SV-b8n"/>
                         <outlet property="womenSwitch" destination="Cnc-Za-Pd0" id="cJf-6h-FBG"/>
                     </connections>

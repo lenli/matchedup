@@ -41,4 +41,12 @@ NSString *const kLLActivityPhotoKey             = @"photo";
 NSString *const kLLActivityTypeLikeKey          = @"like";
 NSString *const kLLActivityTypeDislikeKey       = @"dislike";
 
+
+#pragma mark - Settings
+NSString *const kLLMenEnabledKey                = @"men";
+NSString *const kLLWomenEnabledKey              = @"women";
+NSString *const kLLSingleEnabledKey             = @"single";
+NSString *const kLLAgeMaxKey                    = @"ageMAx";
+
+
 @end
