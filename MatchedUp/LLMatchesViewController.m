@@ -10,6 +10,7 @@
 #import "LLChatViewController.h"
 
 @interface LLMatchesViewController () <UITableViewDataSource, UITableViewDelegate>
+
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *availableChatrooms;
 @end
@@ -60,10 +61,6 @@
 
 
 #pragma mark - UITableViewDataSource Methods
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

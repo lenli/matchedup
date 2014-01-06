@@ -40,7 +40,6 @@
             [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
                 self.currentUserImageView.image = [UIImage imageWithData:data];
                 self.matchedUserImageView.image = self.matchedUserImage;
-                
             }];
         }
     }];
@@ -56,11 +55,13 @@
 
 - (IBAction)viewChatsButtonPressed:(UIButton *)sender
 {
+    NSLog(@"Chats Button Pressed");
     [self.delegate presentMatchesViewController];
 }
 
 - (IBAction)keepSearchingButtonPressed:(UIButton *)sender
 {
+    NSLog(@"Searching Button Pressed");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

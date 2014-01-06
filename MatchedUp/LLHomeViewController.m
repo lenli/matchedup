@@ -82,7 +82,7 @@
         LLProfileViewController *profileVC = segue.destinationViewController;
         profileVC.photo = self.photo;
         
-    } else if ([segue.identifier isEqualToString:@"homeToMatchedSegue"]) {
+    } else if ([segue.identifier isEqualToString:@"homeToMatchSegue"]) {
         LLMatchViewController *matchVC = segue.destinationViewController;
         matchVC.matchedUserImage = self.photoImageView.image;
         matchVC.delegate = self;
@@ -92,6 +92,7 @@
 #pragma mark - IBActions
 - (IBAction)chatBarButtonItemPressed:(UIBarButtonItem *)sender
 {
+    [self performSegueWithIdentifier:@"homeToMatchesSegue" sender:nil];
 }
 - (IBAction)settingsBarButtonItemPressed:(UIBarButtonItem *)sender
 {
@@ -216,6 +217,7 @@
 
 - (void)checkForPhotoUserLikes
 {
+    NSLog(@"Checking for PhotoUserLikes");
     PFQuery *query = [PFQuery queryWithClassName:kLLActivityClassKey];
     [query whereKey:kLLActivityFromUserKey equalTo:self.photo[kLLPhotoUserKey]];
     [query whereKey:kLLActivityToUserKey equalTo:[PFUser currentUser]];
@@ -230,6 +232,7 @@
 
 - (void)createChatroom
 {
+    NSLog(@"Creating Chatroom");
     PFQuery *queryForChatroom = [PFQuery queryWithClassName:@"Chatroom"];
     [queryForChatroom whereKey:@"user1" equalTo:[PFUser currentUser]];
     [queryForChatroom whereKey:@"user2" equalTo:self.photo[kLLPhotoUserKey]];
@@ -240,7 +243,7 @@
     
     PFQuery *queryChatroom = [PFQuery orQueryWithSubqueries:@[queryForChatroom, queryForChatroomInverse]];
     [queryChatroom findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if ([objects count] > 0) {
+        if ([objects count] == 0) {
             PFObject *chatroom = [PFObject objectWithClassName:@"Chatroom"];
             [chatroom setObject:[PFUser currentUser] forKey:@"user1"];
             [chatroom setObject:self.photo[kLLPhotoUserKey] forKey:@"user2"];

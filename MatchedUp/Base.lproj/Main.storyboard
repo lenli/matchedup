@@ -245,7 +245,7 @@
                         <outlet property="settingsBarButtonItem" destination="fp5-gv-rvE" id="fts-VG-QGQ"/>
                         <outlet property="taglineLabel" destination="gX9-pt-3wN" id="X17-Tm-UAs"/>
                         <segue destination="SLJ-4s-tlL" kind="push" identifier="homeToProfileSegue" id="nCy-TB-bRg"/>
-                        <segue destination="hvQ-WU-vDc" kind="push" identifier="homeToMatchSegue" id="wV9-P1-RG8"/>
+                        <segue destination="hvQ-WU-vDc" kind="modal" identifier="homeToMatchSegue" id="wV9-P1-RG8"/>
                         <segue destination="cba-cd-cTT" kind="push" identifier="homeToMatchesSegue" id="DbV-YS-oc9"/>
                     </connections>
                 </viewController>
@@ -440,7 +440,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8Mc-sW-CtZ"/>
                     <connections>
-                        <outlet property="tabelView" destination="bLc-SU-XfR" id="tvn-eR-6ho"/>
+                        <outlet property="tableView" destination="bLc-SU-XfR" id="ryH-mw-fd3"/>
                         <segue destination="Ba7-tq-zhk" kind="push" identifier="matchesToChatSegue" id="Di0-q7-4FI"/>
                     </connections>
                 </viewController>
@@ -456,7 +456,7 @@
                         <viewControllerLayoutGuide type="top" id="2mL-yO-Vqb"/>
                         <viewControllerLayoutGuide type="bottom" id="IJq-bd-E0t"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jpm-Lb-sLb" customClass="LLChat">
+                    <view key="view" contentMode="scaleToFill" id="Jpm-Lb-sLb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
