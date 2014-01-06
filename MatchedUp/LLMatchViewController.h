@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LLMatchViewControllerDelegate <NSObject>
+
+-(void)presentMatchesViewController;
+
+@end
+
 @interface LLMatchViewController : UIViewController
+@property (strong,nonatomic) UIImage *matchedUserImage;
+@property (weak) id <LLMatchViewControllerDelegate> delegate;
 
 @end

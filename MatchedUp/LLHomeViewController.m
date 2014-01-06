@@ -9,8 +9,10 @@
 #import "LLHomeViewController.h"
 #import "LLTestUser.h"
 #import "LLProfileViewController.h"
+#import "LLMatchViewController.h"
 
-@interface LLHomeViewController ()
+@interface LLHomeViewController () <LLMatchViewControllerDelegate>
+
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *chatBarButtonItem;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *settingsBarButtonItem;
 @property (strong, nonatomic) IBOutlet UILabel *firstNameLabel;
@@ -80,6 +82,10 @@
         LLProfileViewController *profileVC = segue.destinationViewController;
         profileVC.photo = self.photo;
         
+    } else if ([segue.identifier isEqualToString:@"homeToMatchedSegue"]) {
+        LLMatchViewController *matchVC = segue.destinationViewController;
+        matchVC.matchedUserImage = self.photoImageView.image;
+        matchVC.delegate = self;
     }
 }
 
@@ -247,6 +253,13 @@
     
 }
 
+#pragma mark - LLMatchViewController Delegate Methods
+- (void)presentMatchesViewController
+{
+    [self dismissViewControllerAnimated:NO completion:^{
+        [self performSegueWithIdentifier:@"homeToMatchesSegue" sender:nil];
+    }];
+}
 @end
 
 
